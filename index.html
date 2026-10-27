@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Digital - Guru PJOK Profesional PPG</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        sport: {
+                            blue: '#0284c7',
+                            darkBlue: '#0f172a',
+                            gold: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-sport-blue flex items-center justify-center text-white font-bold text-xl shadow-md">
+                        <i class="fa-solid me-0.5 fa-person-running"></i>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-lg text-slate-900 tracking-tight block leading-none">PORTOFOLIO PPG</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-wider uppercase">Guru PJOK Profesional</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#tentang" class="hover:text-brand-600 transition">Visi Pendidikan</a>
+                    <a href="#pilar" class="hover:text-brand-600 transition">4 Pilar Profesional</a>
+                    <a href="#rtl" class="hover:text-brand-600 transition">Rencana Tindak Lanjut</a>
+                    <a href="#pendekatan" class="hover:text-brand-600 transition">Pendekatan Pedagogis</a>
+                    <a href="#inovasi" class="hover:text-brand-600 transition">Inovasi Pembelajaran</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-3">
+                    <button onclick="window.print()" class="px-4 py-2 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i> Cetak / PDF
+                    </button>
+                    <a href="#kontak" class="px-4 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm hover:shadow transition flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Hubungi
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button onclick="window.print()" class="p-2 text-slate-600 hover:text-slate-900">
+                        <i class="fa-solid fa-print"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#tentang" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Visi Pendidikan</a>
+            <a href="#pilar" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">4 Pilar Profesional</a>
+            <a href="#rtl" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Rencana Tindak Lanjut</a>
+            <a href="#pendekatan" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Pendekatan Pedagogis</a>
+            <a href="#inovasi" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Inovasi Pembelajaran</a>
+            <a href="#kontak" class="block py-2 text-center text-white bg-brand-600 rounded-lg font-medium">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-20 lg:py-28">
+        <!-- Background Pattern Decor -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-semibold">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-400 animate-ping"></span>
+                        Lulusan Program Pendidikan Profesi Guru (PPG)
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Guru PJOK <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-200">Profesional, Inklusif</span> & Adaptive
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        "Mewujudkan Pendidikan Jasmani yang berpusat pada peserta didik, mengintegrasikan kearifan lokal, serta memprioritaskan kesejahteraan jasmani dan mental (well-being) secara berkelanjutan."
+                    </p>
+
+                    <!-- Quick Badge Approaches -->
+                    <div class="pt-2 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-bullseye text-brand-400"></i> TaRL (Teaching at the Right Level)
+                        </span>
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-universal-access text-sport-blue"></i> DUP (Universal Design)
+                        </span>
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-people-roof text-amber-400"></i> CRT (Permainan Tradisional)
+                        </span>
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-brain text-purple-400"></i> Deep Learning
+                        </span>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4 no-print">
+                        <a href="#rtl" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fa-solid fa-rocket"></i> Rencana Tindak Lanjut
+                        </a>
+                        <a href="#tentang" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl border border-slate-700 transition flex items-center gap-2">
+                            <i class="fa-solid fa-book-open"></i> Refleksi LK 3
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Profile Card / Stats -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-800/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-slate-700/60 shadow-2xl relative">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-500 to-sport-blue flex items-center justify-center text-3xl text-white font-black shadow-lg">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Refleksi Belajar PPG</h3>
+                                <p class="text-sm text-brand-400 font-medium">Lembar Kerja 3 (LK 3)</p>
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-700/40">
+                                <div class="text-2xl font-black text-brand-400">3 Aspect</div>
+                                <div class="text-xs text-slate-400 mt-1">Kognitif, Afektif & Kesejahteraan Fisik/Mental</div>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-700/40">
+                                <div class="text-2xl font-black text-sport-blue">4 Pilar</div>
+                                <div class="text-xs text-slate-400 mt-1">Pengembangan Guru PJOK Profesional</div>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-700/40">
+                                <div class="text-2xl font-black text-amber-400">3 Langkah</div>
+                                <div class="text-xs text-slate-400 mt-1">Rencana Awal Karir Pembelajaran</div>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-700/40">
+                                <div class="text-2xl font-black text-purple-400">Kearifan</div>
+                                <div class="text-xs text-slate-400 mt-1">Integrasi Permainan Tradisional Daerah</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-slate-700/60 flex justify-between items-center text-xs text-slate-400">
+                            <span><i class="fa-solid fa-shield-halved text-brand-400 mr-1"></i> Standar Kemendikbudristek</span>
+                            <span class="text-slate-300 font-medium">Aktif & Sehat</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: VISI PENDIDIKAN DI INDONESIA (REFLEKSI PENGALAMAN BELAJAR) -->
+    <section id="tentang" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-extrabold text-sm tracking-widest uppercase">Refleksi Pengalaman PPG</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Bagaimana Seharusnya Pendidikan di Indonesia?</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">
+                    Pendidikan tidak sekadar menuntut capaian akademis atau kemampuan fisik semata, melainkan membentuk manusia utuh yang sehat jasmani, rohani, dan bertenggang rasa.
+                </p>
+            </div>
+
+            <!-- Main Vision Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl hover:shadow-xl transition duration-300 relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Inklusif & Adaptif</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Memfasilitasi seluruh murid tanpa membedakan latar belakang fisik, sensorik, maupun kognitif. Setiap anak memiliki hak yang sama untuk berpartisipasi dan berkembang dalam aktivitas jasmani.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl hover:shadow-xl transition duration-300 relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Student-Centered</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Berpusat pada kebutuhan, karakteristik, dan gaya belajar murid. Guru bertindak sebagai fasilitator yang merancang aktivitas gerak menyenangkan dan sesuai taraf kemampuan.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl hover:shadow-xl transition duration-300 relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Holistik & Well-Being</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        PJOK fokus membina 3 aspek utama: <strong>Kognitif, Afektif, dan Kesejahteraan Jasmani & Mental (Well-being)</strong> untuk membiasakan pola hidup sehat sepanjang hayat.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Deep Dive Accordion / Callout box -->
+            <div id="pendekatan" class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-10 text-white shadow-xl">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 pb-6 border-b border-slate-700">
+                    <div>
+                        <span class="text-brand-400 font-bold text-sm tracking-wider uppercase">Implementasi Pedagogi PJOK</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold mt-1">4 Pendekatan Utama dalam Pembelajaran</h3>
+                    </div>
+                    <span class="mt-4 md:mt-0 px-4 py-2 bg-brand-500/20 border border-brand-500/40 text-brand-300 text-xs rounded-full font-semibold">
+                        Sesuai Standar Refleksi LK 3
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-brand-500/50 transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center shrink-0 font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white mb-1">Teaching at the Right Level (TaRL)</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Mengakomodasi perbedaan kemampuan fisik awal murid melalui asesmen diagnostik, sehingga materi dan tingkat kesulitan gerak disesuaikan dengan kapasitas tiap murid.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-sport-blue/50 transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-sport-blue text-white flex items-center justify-center shrink-0 font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white mb-1">Desain Universal untuk Pembelajaran (DUP)</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Memastikan aksesibilitas penuh bagi peserta didik yang memiliki hambatan belajar, baik fisik maupun kognitif melalui variasi sarana dan modifikasi aturan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-amber-500/50 transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 font-bold">3</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white mb-1">Culturally Responsive Teaching (CRT)</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Mengangkat dan mengintegrasikan permainan tradisional daerah setempat (seperti Gobak Sodor, Boy-boyan) untuk melestarikan kearifan lokal sekaligus membentuk karakter.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 font-bold">4</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white mb-1">Strategi Deep Learning</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Mendorong pemahaman mendalam agar peserta didik tidak sekadar bergerak di sekolah, tetapi menyadari pentingnya gaya hidup sehat dan aktif sepanjang hayat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: 4 PILAR PENGEMBANGAN GURU PROFESIONAL -->
+    <section id="pilar" class="py-16 sm:py-24 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-extrabold text-sm tracking-widest uppercase">Komitmen Profesional</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Langkah Menjadi Guru PJOK Profesional</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 mt-4 text-base">
+                    Empat strategi konkret yang dijalankan untuk menjaga mutu pengajaran dan profesionalisme secara konstan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pilar 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Refleksi Berkelanjutan</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Melakukan refleksi pasca-pembelajaran untuk mengevaluasi efektivitas metode instruksional dan terus memperbaiki kualitas pengajaran secara berkelanjutan.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-brand-600 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> Evaluasi Rutin Modul
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Pembelajaran Berdiferensiasi</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Merancang modul ajar responsif dengan diferensiasi konten, proses, dan produk melalui modifikasi alat olahraga serta aturan permainan yang fleksibel.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-sky-600 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> Modifikasi Alat & Aturan
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Pengembangan Diri (CPD)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Aktif berpartisipasi dalam Komunitas Belajar (Kombel), MGMP PJOK, serta workshop pedagogis dan teknologi pembelajaran modern secara konsisten.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-purple-600 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> MGMP & Kombel Aktif
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Kode Etik & Keteladanan</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Menjadi role model dalam gaya hidup sehat, menjunjung tinggi nilai sportivitas, kejujuran, kerja sama, serta kesetaraan gender dan inklusivitas.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-amber-600 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> Teladan Gaya Hidup Sehat
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: RENCANA TINDAK LANJUT (3 LANGKAH AWAL KARIR) -->
+    <section id="rtl" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-extrabold text-sm tracking-widest uppercase">Action Plan Karir</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">3 Langkah Utama Mengawali Karir Guru</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 mt-4 text-base">
+                    Rencana konkret yang akan dieksekusi saat memasuki unit sekolah baru untuk memastikan kualitas pembelajaran PJOK maksimal.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- RTL 1 -->
+                <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl font-black shrink-0 shadow-md">
+                        01
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Asesmen Awal & Analisis Karakteristik Murid</h3>
+                            <span class="px-3 py-1 bg-brand-100 text-brand-800 text-xs font-semibold rounded-full">Fase Persiapan</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Menganalisis latar belakang, gaya belajar, tingkat kesegaran jasmani, serta minat dan potensi awal peserta didik. Data asesmen ini menjadi pijakan dasar dalam merancang Modul Ajar PJOK yang responsif, tepat sasaran (TaRL), dan inklusif bagi seluruh siswa.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-4 text-xs font-medium text-slate-500">
+                            <span><i class="fa-solid fa-check text-brand-500 mr-1"></i> Tes Kebugaran Jasmani Awal</span>
+                            <span><i class="fa-solid fa-check text-brand-500 mr-1"></i> Pemetaan Gaya Belajar</span>
+                            <span><i class="fa-solid fa-check text-brand-500 mr-1"></i> Identifikasi Kebutuhan Khusus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RTL 2 -->
+                <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl font-black shrink-0 shadow-md">
+                        02
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Pembelajaran Berbasis Permainan Tradisional & Inovatif</h3>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-semibold rounded-full">Fase Pelaksanaan</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Mengintegrasikan permainan tradisional khas daerah (seperti <em>Boy-boyan, Gobak Sodor, Bentengan, Egrang</em>) ke dalam materi kebugaran jasmani. Strategi ini efektif untuk meningkatkan kesegaran fisik, membangun kerja sama tim, sekaligus membanggakan dan melestarikan kearifan lokal.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-4 text-xs font-medium text-slate-500">
+                            <span><i class="fa-solid fa-check text-amber-500 mr-1"></i> Boy-boyan (Koordinasi & Kelincahan)</span>
+                            <span><i class="fa-solid fa-check text-amber-500 mr-1"></i> Gobak Sodor (Strategi & Kebugaran)</span>
+                            <span><i class="fa-solid fa-check text-amber-500 mr-1"></i> Modifikasi Sarana Tradisional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RTL 3 -->
+                <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-2xl bg-sport-blue text-white flex items-center justify-center text-2xl font-black shrink-0 shadow-md">
+                        03
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Membangun Ekosistem Sekolah Sehat & Kolaboratif</h3>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-semibold rounded-full">Fase Keberlanjutan</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Menggalang sinergi bersama rekan sejawat, kepala sekolah, orang tua, dan komite sekolah untuk menciptakan lingkungan belajar yang aman, nyaman, dan menyenangkan. Mendorong pembiasaan Gerakan Sekolah Sehat (GSS) dan aktivitas fisik rutin bagi seluruh warga sekolah.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-4 text-xs font-medium text-slate-500">
+                            <span><i class="fa-solid fa-check text-sport-blue mr-1"></i> Senam Bersama & Jalan Sehat</span>
+                            <span><i class="fa-solid fa-check text-sport-blue mr-1"></i> Edukasi Gizi Sehat Orang Tua</span>
+                            <span><i class="fa-solid fa-check text-sport-blue mr-1"></i> Kolaborasi Komunitas Sekolah</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: GALERI INOVASI PEMBELAJARAN (INTERACTIVE FILTER) -->
+    <section id="inovasi" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-400 font-extrabold text-sm tracking-widest uppercase">Showcase Pembelajaran</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Inovasi & Modul Pembelajaran PJOK</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-400 mt-4 text-base">
+                    Penerapan konkret berbagai pendekatan pedagogis dalam aktivitas pembelajaran sehari-hari.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10 no-print">
+                <button onclick="filterGallery('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brand-600 text-white transition">Semua Inovasi</button>
+                <button onclick="filterGallery('crt')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Permainan Tradisional (CRT)</button>
+                <button onclick="filterGallery('tarl')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Diferensiasi (TaRL)</button>
+                <button onclick="filterGallery('dup')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Inklusif (DUP)</button>
+            </div>
+
+            <!-- Gallery Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: CRT -->
+                <div class="gallery-item crt bg-slate-800 border border-slate-700 rounded-3xl overflow-hidden shadow-xl transition transform hover:-translate-y-1">
+                    <div class="h-48 bg-slate-700 relative overflow-hidden flex items-center justify-center">
+                        <i class="fa-solid fa-gamepad text-6xl text-slate-600"></i>
+                        <span class="absolute top-4 right-4 bg-amber-500 text-xs font-bold px-3 py-1 rounded-full text-slate-900">CRT / Permainan</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Modul Gobak Sodor Agility</h3>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Melatih kelincahan, taktik bertahan-menyerang, dan kerja sama kelompok melalui permainan tradisional Gobak Sodor.
+                        </p>
+                        <button onclick="openModal('Gobak Sodor Agility', 'Modul ini mengintegrasikan budaya lokal Gobak Sodor untuk melatih kebugaran jantung-paru dan kelincahan gerak siswa. Siswa dibagi berdasarkan tingkat kemampuan awal untuk penentuan peran.')" class="w-full py-2.5 bg-slate-700 hover:bg-brand-600 text-white rounded-xl text-xs font-semibold transition">
+                            Lihat Detail Modul
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: TaRL -->
+                <div class="gallery-item tarl bg-slate-800 border border-slate-700 rounded-3xl overflow-hidden shadow-xl transition transform hover:-translate-y-1">
+                    <div class="h-48 bg-slate-700 relative overflow-hidden flex items-center justify-center">
+                        <i class="fa-solid fa-volleyball text-6xl text-slate-600"></i>
+                        <span class="absolute top-4 right-4 bg-brand-500 text-xs font-bold px-3 py-1 rounded-full text-slate-900">TaRL</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Bola Voli Berdiferensiasi</h3>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Modifikasi net (ketinggian) dan ukuran bola (bola plastik/karet) berdasarkan kelompok kemampuan motorik peserta didik.
+                        </p>
+                        <button onclick="openModal('Bola Voli Berdiferensiasi', 'Menggunakan Teaching at the Right Level (TaRL) di mana siswa pemula menggunakan bola spon ringan dengan net lebih rendah, sedangkan siswa mahir menggunakan bola standar.')" class="w-full py-2.5 bg-slate-700 hover:bg-brand-600 text-white rounded-xl text-xs font-semibold transition">
+                            Lihat Detail Modul
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: DUP -->
+                <div class="gallery-item dup bg-slate-800 border border-slate-700 rounded-3xl overflow-hidden shadow-xl transition transform hover:-translate-y-1">
+                    <div class="h-48 bg-slate-700 relative overflow-hidden flex items-center justify-center">
+                        <i class="fa-solid fa-basketball text-6xl text-slate-600"></i>
+                        <span class="absolute top-4 right-4 bg-sky-500 text-xs font-bold px-3 py-1 rounded-full text-slate-900">DUP Inklusif</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Atletik Inklusif Multilevel</h3>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Desain Universal Pembelajaran yang memungkinkan peserta didik berkebutuhan khusus berpartisipasi aktif dalam nomor lari & lempar.
+                        </p>
+                        <button onclick="openModal('Atletik Inklusif Multilevel', 'Penerapan DUP dengan lintasan terpandu (panduan suara/visual) dan modifikasi alat lempar busa, memastikan seluruh murid berkebutuhan khusus mengalami keberhasilan belajar.')" class="w-full py-2.5 bg-slate-700 hover:bg-brand-600 text-white rounded-xl text-xs font-semibold transition">
+                            Lihat Detail Modul
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FORUM KONTAK & PENGESAHAN -->
+    <section id="kontak" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-600 font-extrabold text-sm tracking-widest uppercase">Hubungi Guru</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Mari Berkolaborasi untuk Sekolah Sehat</h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Terbuka untuk diskusi pengembangan kurikulum PJOK, integrasi permainan tradisional, dan penerapan ekosistem sekolah sehat.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-medium">Email Profesional</div>
+                                <div class="text-slate-900 font-bold">guru.pjok.ppg@sekolah.sch.id</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-medium">Domisili & Penugasan</div>
+                                <div class="text-slate-900 font-bold">Indonesia</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-medium">Status Sertifikasi</div>
+                                <div class="text-slate-900 font-bold">Lulusan PPG Sertifikasi PJOK</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="lg:col-span-7 no-print">
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">Kirim Pesan / Undangan Kolaborasi</h3>
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Nama Lengkap</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition" placeholder="Masukkan nama Anda">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Instansi / Sekolah</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition" placeholder="Nama instansi">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Topik Diskusi</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition">
+                                    <option>Implementasi Pembelajaran PJOK / TaRL</option>
+                                    <option>Pengembangan Permainan Tradisional (CRT)</option>
+                                    <option>Program Sekolah Sehat & Kebugaran</option>
+                                    <option>Lainnya</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Pesan</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-running"></i>
+                </div>
+                <span class="text-white font-bold">Portofolio PPG - Guru PJOK</span>
+            </div>
+            <p>© Refleksi Lembar Kerja 3 (LK 3) PPG. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DETAIL INOVASI -->
+    <div id="modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-fade-in">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold text-slate-900 mb-4"></h3>
+            <p id="modalBody" class="text-slate-600 leading-relaxed text-sm mb-6"></p>
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-semibold text-xs">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Interactive Gallery Filter
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'active');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+            event.target.classList.add('bg-brand-600', 'text-white', 'active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Functionality
+        function openModal(title, text) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerText = text;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Custom Toast Notification instead of alert()
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Create toast notification
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 bg-brand-600 text-white px-6 py-4 rounded-2xl shadow-2xl z-50 flex items-center gap-3 animate-bounce';
+            toast.innerHTML = '<i class="fa-solid fa-circle-check text-xl"></i> <span>Terima kasih! Pesan Anda berhasil dikirim.</span>';
+            
+            document.body.appendChild(toast);
+            document.getElementById('contactForm').reset();
+
+            setTimeout(() => {
+                toast.remove();
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
